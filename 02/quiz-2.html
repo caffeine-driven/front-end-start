@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>source</title>
+    <style type="text/css">
+        .black, .white, .red{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        .black{
+            background-color: black;
+        }
+        .white{
+            background-color: white;
+        }
+        .red{
+            background-color: red;
+        }
+        .board_line{
+            width: 120px;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        #board{
+            border: 2px solid #dbdbdb;
+            width: 120px;
+            height: 120px;
+        }
+        #board, .board_line, .black, .red, .white{
+            font-size: 0px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="board">
+    <!-- 이 HTML을 자바스크립트로 추가하면 됩니다.
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+
+      <span class="white"></span>
+      <span class="black"></span>
+      <span class="white"></span>
+      <span class="black"></span>
+    //-->
+</div>
+<script type="text/javascript" src="tmpl.js"></script>
+<script type="text/template" id="cell_template">
+    <span class="{cell_class}"></span>
+</script>
+<script type="text/template" id="line_template">
+    <div class="{line_class}">{content}</div>
+</script>
+<script type="text/javascript" src="chessboard.js"></script>
+</body>
+</html>
