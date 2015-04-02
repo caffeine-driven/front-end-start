@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="kr">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="boxoffice.css">
+</head>
+<body>
+    <ul id="boxoffice_list">
+    </ul>
+
+    <div class="wrapbutton">
+        <button id="prev">
+            이전
+        </button>
+        <button id="next">
+            다음
+        </button>
+    </div>
+
+    <script type="text/template" id="img_template">
+        <li class="wrap_article">
+            <img class="movie_poster" src="{img_path}"/>
+            <div class="wrap_text">
+                <span class="article_text">{title}</span>
+                <span class="article_text">평점 {star_number}</span>
+                <span class="article_text">점유율 {ratio}</span>
+            </div>
+        </li>
+
+    </script>
+    <script type="text/javascript" src="appendMovieList.js"></script>
+    <script type="text/javascript" src="loadPage.js"></script>
+</body>
+</html>

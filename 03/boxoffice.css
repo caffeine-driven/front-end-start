@@ -1,0 +1,14 @@
+.wrap_article{
+
+}
+.wrap_text{
+    display: inline-block;
+    height: 100px;
+}
+.movie_poster{
+    height: 100px;
+    display: inline-block;
+}
+.article_text{
+    display: block;
+}
