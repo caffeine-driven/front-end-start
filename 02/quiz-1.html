@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>문제소스</title>
+    <style type="text/css">
+        #wrap{
+            width: 340px;
+            margin-bottom: 10px;
+        }
+        .wrapbutton{
+            width: 100px;
+        }
+        #wrap, .wrapbutton{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .wrap_article{
+            width: 108px;
+            font-size: 11pt;
+            display: inline-block;
+        }
+        .article_text{
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
 
 <div id="wrap"></div>
-
-<button id="prev">
+<div class="wrapbutton">
+    <button id="prev">
     이전
-</button>
-<button id="next">
-    다음
-</button>
+    </button>
+    <button id="next">
+        다음
+    </button>
+</div>
 <script type="text/template" id="img_template">
-    <div style="display: inline-block">
+    <div class="wrap_article">
         <img style="display: block;" src="{img_path}"/>
-        <span style="display: inline-block; width: 50px;">{content}</span>
+        <span class="article_text">{content}</span>
     </div>
+</script>
 
 </script>
 
