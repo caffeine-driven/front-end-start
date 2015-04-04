@@ -6,12 +6,14 @@ var currentPage = 1;
 var searchWord = '';
 function loadScript(searchword, pageNumber)
 {
-    currentPage = pageNumber;
-    var head = document.getElementsByTagName("head")[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://apis.daum.net/search/web?apikey=a90f077791b6169ebbf969b16fe594ae&q='+searchword+'&output=json&callback=loadJSON&pageno='+pageNumber;
-    head.appendChild(script);
+    //currentPage = pageNumber;
+    //var head = document.getElementsByTagName("head")[0];
+    //var script = document.createElement('script');
+    //script.type = 'text/javascript';
+    //script.src = 'https://apis.daum.net/search/web?apikey=a90f077791b6169ebbf969b16fe594ae&q='+searchword+'&output=json&callback=loadJSON&pageno='+pageNumber;
+    //head.appendChild(script);
+    var url = 'https://apis.daum.net/search/web?apikey=a90f077791b6169ebbf969b16fe594ae&q='+searchword+'&output=json&callback=loadJSON&pageno='+pageNumber;
+    getJSON(url, loadJSON);
 }
 function setButton(){
     setSearchButton();
