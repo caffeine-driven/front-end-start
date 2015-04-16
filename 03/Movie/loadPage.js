@@ -12,6 +12,10 @@ function loadScript(pageNumber)
     script.type = 'text/javascript';
     script.src = 'http://m.movie.daum.net/data/movie/movie_info/box_office.json?country=KR&startDate=20150101&endDate=20150401&pageSize=5&callback=done&pageNo='+pageNumber;
     head.appendChild(script);
+    console.log(script);
+    script.addEventListener("load", function(ev){
+        console.log(script);
+    });
 }
 
 function setButton(){

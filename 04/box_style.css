@@ -1,0 +1,23 @@
+#game_area{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+}
+.interval_area{
+    position: absolute;
+    top: 0%;
+    right: 0px;
+}
+#red_box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    background-color: red;
+}
+.score_area{
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
