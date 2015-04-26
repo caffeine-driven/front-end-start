@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="box_style.css">
+</head>
+<body>
+    <div id="game_area">
+        <div class="score_area">
+            <span>점수</span>
+            <span id="score"></span>
+        </div>
+        <div class="interval_area">
+            <span>인터벌 설정</span>
+            <input type="text" id="interval" value="3000">
+        </div>
+        <button id="start_game">게임 시작</button>
+        <button id="stop_game">게임 중지</button>
+        <div id="red_box"></div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="gameLogic.js"></script>
+</body>
+</html>
