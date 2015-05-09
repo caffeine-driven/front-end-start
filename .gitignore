@@ -12,3 +12,4 @@ front-end-start.iml
 .idea/copyright/profiles_settings.xml
 .idea/jsLibraryMappings.xml
 .idea/uiDesigner.xml
+node_modules
