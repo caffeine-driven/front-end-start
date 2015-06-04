@@ -1,20 +1,18 @@
 /**
  * Created by ghost9087 on 15. 6. 4..
  */
-var previousCard = null;
-var currentCard = null;
-function createCards(i) {
+
+function createCards(i, callback) {
     var card = document.createElement('div');
-    card.className = 'card';
+    card.classList.add('card');
     var textNode = document.createTextNode(i);
 
     card.appendChild(textNode);
-    card.addEventListener('click', onCardClick);
+    card.addEventListener('click', callback);
 
     return card;
 }
-function restoreCards(card) {
-    currentCard = card;
+function restoreCards() {
     window.setTimeout(function(){
         var fliped = document.querySelectorAll('.card_flip');
         for(var i = 0; i < fliped.length; i++){

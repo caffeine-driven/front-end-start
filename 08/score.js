@@ -7,29 +7,17 @@ var score = 0;
 
 function increaseScore(){
     score++;
-    scoreBoard.innerHTML = score;
+    updateScore();
 }
 function decreaseScore(){
     if(score > 0)
         score--;
+    updateScore();
+}
+function updateScore(){
     scoreBoard.innerHTML = score;
 }
-function calcScore() {
-    if (previousCard == null) {
-        previousCard = this;
-    }
-    else {
-        if (previousCard != this) {
-            if (previousCard.innerHTML === this.innerHTML) {
-                increaseScore();
-                deactivateCard();
-            }
-            else{
-                decreaseScore();
-
-            }
-            restoreCards(this);
-            previousCard = null;
-        }
-    }
+function clearScore(){
+    score = 0;
+    updateScore();
 }

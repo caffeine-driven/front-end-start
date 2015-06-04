@@ -1,20 +1,18 @@
 /**
  * Created by ghost9087 on 15. 6. 4..
  */
-var cards = [1,2,3,4,5,1,2,3,4,5];
+var initialCardList = [1,2,3,4,5,1,2,3,4,5];
 var cardBoard = document.getElementById('card_bard');
+var previousCard = null;
+var currentCard = null;
 
-var array = [];
-
-
-
-array = shuffle(cards);
 initCardBoard();
 
 function isGameFinished() {
     var fliped = document.querySelectorAll('.matched');
     if(fliped.length == 10) {
-        window.alert('게임끝ㅋ');
+        window.alert('게임 끝!!!!!');
+        initCardBoard();
     }
 }
 function onCardClick(ev){
@@ -25,9 +23,28 @@ function onCardClick(ev){
     isGameFinished();
 }
 
+function calcScore() {
+    if (previousCard == null) {
+        previousCard = this;
+    }
+    else if (previousCard != this) {
+        if (previousCard.innerHTML === this.innerHTML) {
+            increaseScore();
+            deactivateCard();
+        }
+        else{
+            decreaseScore();
+        }
+        restoreCards();
+        previousCard = null;
+    }
+}
 function initCardBoard(){
-    for(var i in array){
-        var card = createCards(array[i]);
+    var cardList = shuffle(initialCardList);
+    cardBoard.innerHTML = '';
+    for(var i in cardList){
+        var card = createCards(cardList[i], onCardClick);
         cardBoard.appendChild(card);
     }
+    clearScore();
 }
