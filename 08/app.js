@@ -11,11 +11,18 @@ var array = [];
 array = shuffle(cards);
 initCardBoard();
 
+function isGameFinished() {
+    var fliped = document.querySelectorAll('.matched');
+    if(fliped.length == 10) {
+        window.alert('게임끝ㅋ');
+    }
+}
 function onCardClick(ev){
     if(this.classList.contains('matched'))
         return;
     flipCard(this);
     calcScore.call(this);
+    isGameFinished();
 }
 
 function initCardBoard(){
